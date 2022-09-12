@@ -3,7 +3,7 @@ import { environment } from 'src/environments/environment';
 
 
 const nodemailer = require("nodemailer");
-require("dotenv").config();
+// require("dotenv").config();
 
 @Component({
   selector: 'app-header',
