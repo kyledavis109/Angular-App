@@ -4,13 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKey: 'devKey',
-  username: 'kyledavis109@gmail.com',
-  password: '60StonedRockSteppen19',
-  clientid: '701161803442-t109qvstdsl1mp7mt7lhn76a43lkhk3n.apps.googleusercontent.com',
-  clientsecret: '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',
-  refreshtoken: '1//04Fx1hrUv0Un1CgYIARAAGAQSNwF-L9IrdDWFkie8rUvlG0yICXsUchSShDPugzaYDW2L035hT7ZIoL71UlP5tFsgnxQzQMthhoA'
-
+  apiKey: 'devKey'
 };
 
 /*
