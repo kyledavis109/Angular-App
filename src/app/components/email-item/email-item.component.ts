@@ -17,18 +17,18 @@ export class EmailItemComponent implements OnInit {
   }
 
   infoForm = this.fb.group({
-    name: ['', [
+    emailAddress: ['', [
       Validators.required,
       Validators.minLength(3)
     ]],
-    email: ['', [
+    emailMessage: ['', [
       Validators.required,
       Validators.email
     ]]
   });
 
-  get name() { return this.infoForm.get('name'); }
-  get email() { return this.infoForm.get('email'); }
+  get emailAddress() { return this.infoForm.get('emailAddress') as FormControl; }
+  get emailMessage() { return this.infoForm.get('emailMessage') as FormControl;}
 
   sendMail() {
     console.log(this.infoForm.value);
