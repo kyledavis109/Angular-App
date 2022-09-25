@@ -1,12 +1,12 @@
-<form class="add-form" [formGroup]="nodeMailerForm">
+<form class="add-form" [formGroup]="infoForm">
     <div class="form-control">
-      <label for="text">Recipient(s)</label>
+      <label for="text">Recipient</label>
       <input
         ng-model="recipient"
         type="text"
         name="recipient"
         id="text"
-        placeholder="Add Recipient(s)"
+        placeholder="Add Recipient"
         required
       />
     </div>
@@ -15,7 +15,7 @@
       <input
         type="text"
         name="subject"
-        id="day"
+        id="subject"
         placeholder="Specify Subject"
       />
     </div>
