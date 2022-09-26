@@ -5,26 +5,38 @@
       formControlName="emailAddress"
       type="text"
       name="recipient"
-      id="text"
+      id="recipient"
       placeholder="Add Recipient"
+      formControlName="emailAddress"
       required
     />
     <div *ngIf="emailAddress.invalid && (emailAddress.dirty || emailAddress.touched)" class="alert alert-danger p-1">
       <p *ngIf="emailAddress.errors?.['required']" class="mb-0">
-        Email is required.
+        Email address is required.
       </p>
-      <p *ngIf="emailAddress.errors?.['minlength']" class="mb-0">
+      <!-- <p *ngIf="emailAddress.errors?.['minlength']" class="mb-0">
         Email must be at least 3 characters long.
-      </p>
+      </p> -->
     </div>
-    <!-- <div class="form-control">
-      <label for="subject">Subject</label>
-      <input
-        type="text"
-        name="subject"
-        id="subject"
-        placeholder="Specify Subject"
-      /> -->
+  </div>
+  <div class="form-control">
+    <label for="subject">Subject</label>
+    <input
+      type="text"
+      name="subject"
+      id="subject"
+      placeholder="Specify Message Subject"
+      formControlName="emailSubject"
+      required
+    />
+    <div *ngIf="emailSubject.invalid && (emailSubject.dirty || emailSubject.touched)" class="alert alert-danger p-1">
+      <p *ngIf="emailSubject.errors?.['required']" class="mb-0">
+        Email message subject is required.
+      </p>
+      <!-- <p *ngIf="emailSubject.errors?.['email']" class="mb-0">
+        Email is incorrect.
+      </p> -->
+    </div>
   </div>
   <div class="form-control">
     <label for="message">Message</label>
@@ -33,15 +45,16 @@
       name="message"
       id="message"
       placeholder="Write Message"
-      formControlName="email"
+      formControlName="emailMessage"
+      required
     />
     <div *ngIf="emailMessage.invalid && (emailMessage.dirty || emailMessage.touched)" class="alert alert-danger p-1">
       <p *ngIf="emailMessage.errors?.['required']" class="mb-0">
         Email message is required.
       </p>
-      <p *ngIf="emailMessage.errors?.['email']" class="mb-0">
+      <!-- <p *ngIf="emailMessage.errors?.['email']" class="mb-0">
         Email is incorrect.
-      </p>
+      </p> -->
     </div>
   </div>
   <input type="submit" value="Send" class="btn btn-block" />
