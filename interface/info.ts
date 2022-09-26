@@ -1,4 +1,4 @@
 export interface Iinfo {
-    name: string;
-    email: string;
+    emailAddress: string;
+    emailMessage: string;
 }
