@@ -1,4 +1,4 @@
-<form class="add-form" [formGroup]="infoForm" (ngSubmit)="sendMail()" #form="ngForm">
+<form *ngIf="showAddTask" class="add-form" [formGroup]="infoForm" (ngSubmit)="sendMail()" #form="ngForm">
   <div class="form-control">
     <label for="text">Recipient</label>
     <input

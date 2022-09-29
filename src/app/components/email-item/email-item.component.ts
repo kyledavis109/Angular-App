@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { UiService } from 'src/app/services/ui.service';
 import { MessageService } from 'src/app/services/message.service';
 
 @Component({
@@ -9,11 +10,12 @@ import { MessageService } from 'src/app/services/message.service';
   styleUrls: ['./email-item.component.css']
 })
 export class EmailItemComponent implements OnInit {
-  public subscription!: Subscription;
   nodeMailerForm!: FormGroup;
+  showAddTask!: boolean;
+  public subscription!: Subscription;
 
-  constructor(private send: MessageService, private fb: FormBuilder) { 
-
+  constructor(private send: MessageService, private fb: FormBuilder, private uiService: UiService) { 
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddTask = value));
   }
 
   infoForm = this.fb.group({
