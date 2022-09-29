@@ -11,7 +11,7 @@ import { MessageService } from 'src/app/services/message.service';
 })
 export class EmailItemComponent implements OnInit {
   nodeMailerForm!: FormGroup;
-  showAddTask!: boolean;
+  showAddTask: boolean = true;
   public subscription!: Subscription;
 
   constructor(private send: MessageService, private fb: FormBuilder, private uiService: UiService) { 
