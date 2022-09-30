@@ -9,18 +9,18 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   title: string = 'Angular Emailer';
-  showAddTask: boolean = true;
+  showEmailForm: boolean = true;
   subscription!: Subscription;
 
   constructor(private uiService: UiService, private router: Router) { 
-    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddTask = value));
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showEmailForm = value));
   }
 
   ngOnInit(): void {
   }
 
-  toggleAddTask() {
-    this.uiService.toggleAddTask();
+  toggleEmailForm() {
+    this.uiService.toggleEmailForm();
   }
 
   hasRoute(route: string) {

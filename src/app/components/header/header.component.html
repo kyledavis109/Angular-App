@@ -2,8 +2,8 @@
     <h1 class="rainbow">{{ title }}</h1>
     <app-button
         *ngIf="hasRoute('/')" 
-        color="{{ showAddTask ? 'red' : 'green' }}"
-        text="{{ showAddTask ? 'Close' : 'Open' }}"
-        (btnClick)="toggleAddTask()">
+        color="{{ showEmailForm ? 'red' : 'green' }}"
+        text="{{ showEmailForm ? 'Close' : 'Open' }}"
+        (btnClick)="toggleEmailForm()">
     </app-button>
 </header>

@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UiService } from 'src/app/services/ui.service';
-import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -10,13 +7,9 @@ import { Router } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  hasRoute(route: string) {
-    return this.router.url === route;
   }
 
 }
