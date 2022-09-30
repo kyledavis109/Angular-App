@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Iinfo } from 'interface/info';
+import { Email } from 'interface/email';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { Iinfo } from 'interface/info';
 export class MessageService {
 
   constructor(private http: HttpClient) { }
-  sendEmail(obj: any): Observable<Iinfo> {
-    return this.http.post<Iinfo>('http://localhost:5000/sendEmail', obj);
+  sendEmail(obj: any): Observable<Email> {
+    return this.http.post<Email>('http://localhost:5000/sendEmail', obj);
   }
 }
