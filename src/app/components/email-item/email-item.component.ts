@@ -29,7 +29,7 @@ export class EmailItemComponent implements OnInit {
     ]],
     emailMessage: ['', [
       Validators.required,
-      Validators.minLength(3)
+      Validators.minLength(1)
     ]]
   });
 
