@@ -1,4 +1,4 @@
-# Angular Emailer App
+# Angular Emailer
 
 ## About
 
