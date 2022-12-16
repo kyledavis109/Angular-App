@@ -9,6 +9,7 @@ import { Email } from 'interface/email';
 export class MessageService {
 
   constructor(private http: HttpClient) { }
+  
   sendEmail(obj: any): Observable<Email> {
     return this.http.post<Email>('http://localhost:5000/sendEmail', obj);
   }
