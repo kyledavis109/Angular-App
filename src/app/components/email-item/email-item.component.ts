@@ -33,9 +33,9 @@ export class EmailItemComponent implements OnInit {
     ]]
   });
 
-  get emailAddress() { return this.infoForm.get('emailAddress') as FormControl; }
-  get emailSubject() { return this.infoForm.get('emailSubject') as FormControl; }
-  get emailMessage() { return this.infoForm.get('emailMessage') as FormControl;}
+  get emailAddress() { return this.infoForm.get('emailAddress') as FormControl };
+  get emailSubject() { return this.infoForm.get('emailSubject') as FormControl };
+  get emailMessage() { return this.infoForm.get('emailMessage') as FormControl };
 
   sendMail() {
     console.log(this.infoForm.value);
